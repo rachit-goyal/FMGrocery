@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.aaaos.fmgrocery">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".CatProducts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Single_product"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".imageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AllCategories"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AllProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCustomer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewPreviousCustomer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UpdateOrEditCustomer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Coupon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderConfirmed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyOrders"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderSummary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AboutUs"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ContactUs"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

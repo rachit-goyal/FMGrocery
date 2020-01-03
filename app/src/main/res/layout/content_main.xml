@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relate"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:id="@+id/cat"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Categories"
+                android:background="@drawable/catdraw"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/catall"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="2dp"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_weight=".5"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="2dp"
+                android:padding="10dp"
+                android:id="@+id/searchlinear"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/catdraw"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@android:drawable/ic_search_category_default" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Search Products"
+                    android:textColor="#9E9E9E"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/vv"
+        android:layout_below="@+id/cat"
+        android:layout_margin="5dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_slider"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_dots"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+
+    </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewall"
+            android:text="View All"
+            android:textStyle="bold"
+            android:textColor="#CD4738"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/vv"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/products"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/viewall"></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:id="@+id/shopbycat"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Shop By Category"
+            android:layout_below="@+id/products"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/category"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/shopbycat"></android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:id="@+id/shopbycombo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Our Combo Offer"
+            android:layout_below="@+id/category"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewallcombo"
+            android:text="View All"
+            android:textStyle="bold"
+            android:textColor="#CD4738"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/shopbycombo"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/combo"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/viewallcombo"></android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:text="Farmer Market"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_below="@+id/combo"
+            android:background="#000000"/>
+    </RelativeLayout>
+</ScrollView>
